@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My PHP Project with Tailwind</title>
+    <!-- Import Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+    .mySlides { display: none; }
+</style>
+<body class="bg-gray-100">
+    <!-- header -->
+    <div class="bg-[#004666]">
+        <div class=" flex items-center justify-between mx-20">
+            <div>
+            <a href="./home.html"><img src="./assets/logo.png" alt="" width="120px" height="100px"></a>
+            </div>
+            <div class="flex gap-10 font-medium font-sans text-white text-[14px]">
+                <p><a href="">Mã E-voucher</a></p>
+                <p><a href="">Khuyến Mãi</a></p>
+                <p><a href="">Thực Đơn</a></p>
+                <p><a href="">Theo Dõi Đơn Hàng</a></p>
+                <p><a href="">Danh Sách Cửa Hàng</a></p>
+                <p><a href="">Blog</a></p>
+            </div>
+            <div class="flex gap-4 text-white">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                    </svg>              
+                </div>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                        <path fill-rule="evenodd" d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 0 0 4.25 22.5h15.5a1.875 1.875 0 0 0 1.865-2.071l-1.263-12a1.875 1.875 0 0 0-1.865-1.679H16.5V6a4.5 4.5 0 1 0-9 0ZM12 3a3 3 0 0 0-3 3v.75h6V6a3 3 0 0 0-3-3Zm-3 8.25a3 3 0 1 0 6 0v-.75a.75.75 0 0 1 1.5 0v.75a4.5 4.5 0 1 1-9 0v-.75a.75.75 0 0 1 1.5 0v.75Z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                        <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd" />
+                     </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- main -->
+
+        <nav class="bg-white p-4">
+          <div class=" mx-auto flex justify-between items-center px-20">
+              <ul class="flex space-x-6 text-black font-medium">
+                  <li><a href="#">GHIỀN GÀ</a></li>
+                  <li><a href="#">TỰU TRƯỜNG</a></li>
+                  <li><a href="#">COMBO</a></li>
+                  <li><a href="#">PIZZA</a></li>
+                  <li><a href="#">MY BOX</a></li>
+                  <li><a href="#">MÓN KHAI VỊ</a></li>
+                  <li><a href="#">THỨC UỐNG</a></li>
+              </ul>
+          </div>
+        </nav>
+      <div class="px-6">
+      <!-- Main content -->
+      <div class=" grid grid-rows-3 grid-flow-col mx-auto py-4 ">
+          <!-- Products Section -->
+          <div class=" flex row-span-3 grid grid-cols-4 gap-6">
+              <!-- Pizza Card -->
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img class="w-full h-48 object-cover transform transition-transform duration-300 hover:scale-105 hover:brightness-110" 
+                    src="./assets/bestseller.png" 
+                    alt="Pizza Bò Gơ Bò Mỹ Xốt Phô Mai Ngập Vị">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-center text-blue-800 uppercase">Pizza Bò Gơ Bò Mỹ Xốt Phô Mai Ngập Vị</h3>
+                    <div class="flex text-center justify-center mt-3">
+                        <p class="text-center text-gray-700 px-2 font-medium">Medium</p>
+                        <span class="font-medium">- 205,000₫</span>
+                    </div>
+                    <span class="inline-block bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full mt-2">NEW</span>
+                </div>
+            </div>
+            <!-- Pizza Card -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img class="w-full h-48 object-cover transform transition-transform duration-300 hover:scale-105 hover:brightness-110" 
+                    src="./assets/bestseller1.png" 
+                    alt="Pizza Hải Sản Xốt Pesto Chanh Sả">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-center text-blue-800 uppercase">Pizza Hải Sản Xốt Pesto Chanh Sả</h3>
+                    <div class="flex text-center justify-center mt-3">
+                        <p class="text-center text-gray-700 px-2 font-medium">Medium</p>
+                        <span class="font-medium">- 205,000₫</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Pizza Card -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img class="w-full h-48 object-cover transform transition-transform duration-300 hover:scale-105 hover:brightness-110" 
+                    src="./assets/bestseller2.png" 
+                    alt="Pizza Ngập Vị Phô Mai Hảo Hạng">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-center text-blue-800 uppercase">Pizza Ngập Vị Phô Mai Hảo Hạng</h3>
+                    <div class="flex text-center justify-center mt-3">
+                        <p class="text-center text-gray-700 px-2 font-medium">Medium</p>
+                        <span class="font-medium">- 205,000₫</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Pizza Card -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img class="w-full h-48 object-cover transform transition-transform duration-300 hover:scale-105 hover:brightness-110" 
+                    src="./assets/bestseller3.png" 
+                    alt="Pizza Siêu Topping Bò Và Tôm Nướng Kiểu Mỹ">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-center text-blue-800 uppercase">Pizza Siêu Topping Bò Và Tôm Nướng Kiểu Mỹ</h3>
+                    <div class="flex text-center justify-center mt-3">
+                        <p class="text-center text-gray-700 px-2 font-medium">Medium</p>
+                        <span class="font-medium">- 205,000₫</span>
+                    </div>
+                    <span class="inline-block bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full mt-2">Extra 50% Topping</span>
+                </div>
+            </div>
+            <!-- Pizza Card -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <img class="w-full h-48 object-cover transform transition-transform duration-300 hover:scale-105 hover:brightness-110" 
+                  src="./assets/bestseller.png" 
+                  alt="Pizza Bò Gơ Bò Mỹ Xốt Phô Mai Ngập Vị">
+              <div class="p-4">
+                  <h3 class="text-lg font-semibold text-center text-blue-800 uppercase">Pizza Bò Gơ Bò Mỹ Xốt Phô Mai Ngập Vị</h3>
+                  <div class="flex text-center justify-center mt-3">
+                      <p class="text-center text-gray-700 px-2 font-medium">Medium</p>
+                      <span class="font-medium">- 205,000₫</span>
+                  </div>
+                  <span class="inline-block bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full mt-2">NEW</span>
+              </div>
+          </div>
+          <!-- Pizza Card -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <img class="w-full h-48 object-cover transform transition-transform duration-300 hover:scale-105 hover:brightness-110" 
+                  src="./assets/bestseller1.png" 
+                  alt="Pizza Hải Sản Xốt Pesto Chanh Sả">
+              <div class="p-4">
+                  <h3 class="text-lg font-semibold text-center text-blue-800 uppercase">Pizza Hải Sản Xốt Pesto Chanh Sả</h3>
+                  <div class="flex text-center justify-center mt-3">
+                      <p class="text-center text-gray-700 px-2 font-medium">Medium</p>
+                      <span class="font-medium">- 205,000₫</span>
+                  </div>
+              </div>
+          </div>
+    
+          <!-- Pizza Card -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <img class="w-full h-48 object-cover transform transition-transform duration-300 hover:scale-105 hover:brightness-110" 
+                  src="./assets/bestseller2.png" 
+                  alt="Pizza Ngập Vị Phô Mai Hảo Hạng">
+              <div class="p-4">
+                  <h3 class="text-lg font-semibold text-center text-blue-800 uppercase">Pizza Ngập Vị Phô Mai Hảo Hạng</h3>
+                  <div class="flex text-center justify-center mt-3">
+                      <p class="text-center text-gray-700 px-2 font-medium">Medium</p>
+                      <span class="font-medium">- 205,000₫</span>
+                  </div>
+              </div>
+          </div>
+          <!-- Pizza Card -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <img class="w-full h-48 object-cover transform transition-transform duration-300 hover:scale-105 hover:brightness-110" 
+                  src="./assets/bestseller3.png" 
+                  alt="Pizza Siêu Topping Bò Và Tôm Nướng Kiểu Mỹ">
+              <div class="p-4">
+                  <h3 class="text-lg font-semibold text-center text-blue-800 uppercase">Pizza Siêu Topping Bò Và Tôm Nướng Kiểu Mỹ</h3>
+                  <div class="flex text-center justify-center mt-3">
+                      <p class="text-center text-gray-700 px-2 font-medium">Medium</p>
+                      <span class="font-medium">- 205,000₫</span>
+                  </div>
+                  <span class="inline-block bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full mt-2">Extra 50% Topping</span>
+              </div>
+        </div>
+              <!-- Add more product items here as needed -->
+      </div>
+        <!-- Cart Section -->
+        <div class=" bg-white row-span-2 p-4 rounded-lg shadow ml-6">
+            <h3 class="text-lg font-bold">Giỏ Hàng</h3>
+            <p class="text-gray-500">Bạn vẫn chưa chọn món</p>
+            <div class="mt-4">
+                <h4 class="font-bold">Thêm Món Yêu Thích</h4>
+                <div class="flex justify-between items-center mt-2">
+                    <p class="text-gray-700">Xà Lách Trộn Cá Ngừ Và Thịt Xông Khói</p>
+                    <p class="text-gray-700 font-bold">79,000 đ</p>
+                </div>
+            </div>
+    
+            <div class="mt-6 flex justify-between items-center">
+                <label class="text-gray-700">Muỗng nhựa</label>
+                <input type="checkbox" class="toggle">
+            </div>
+            <div class="mt-6">
+                <h4 class="font-bold text-gray-700">Tạm tính</h4>
+                <div class="flex justify-between items-center mt-2">
+                    <p class="text-gray-700">0 đ</p>
+                </div>
+                <div class="flex justify-between items-center">
+                    <p class="text-gray-700">Giảm thành viên</p>
+                    <p class="text-gray-700">0 đ</p>
+                </div>
+                <div class="flex justify-between items-center">
+                    <p class="text-gray-700">Giảm khuyến mại</p>
+                    <p class="text-gray-700">0 đ</p>
+                </div>
+                <div class="flex justify-between items-center">
+                    <p class="text-gray-700">Phí giao hàng</p>
+                    <p class="text-gray-700">0 đ</p>
+                </div>
+                <div class="mt-6 bg-gray-100 p-4 rounded-lg">
+                    <p class="font-bold text-right">Đã bao gồm VAT</p>
+                    <button class="w-full bg-red-600 text-white px-4 py-2 rounded mt-4">Thanh Toán</button>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- main -->
+
+
+    <!-- footer -->
+    <footer class="bg-[#004666] pt-10">
+        <!-- Top section with links and information -->
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-white">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <!-- Learn More Column -->
+            <div>
+              <h3 class="text-lg font-semibold mb-4">LEARN MORE</h3>
+              <ul>
+                <li><a href="#" class="hover:underline">Pricing</a></li>
+                <li><a href="#" class="hover:underline">Free Stuff</a></li>
+                <li><a href="#" class="hover:underline">Help Center</a></li>
+              </ul>
+            </div>
+            
+            <!-- About Column -->
+            <div>
+              <h3 class="text-lg font-semibold mb-4">ABOUT</h3>
+              <ul>
+                <li><a href="#" class="hover:underline">About Singleton</a></li>
+                <li><a href="#" class="hover:underline">Jobs</a></li>
+                <li><a href="#" class="hover:underline">Team</a></li>
+              </ul>
+            </div>
+            
+            <!-- Get In Touch Column -->
+            <div>
+              <h3 class="text-lg font-semibold mb-4">GET IN TOUCH</h3>
+              <ul>
+                <li><a href="#" class="hover:underline">Get Support</a></li>
+                <li><a href="#" class="hover:underline">Contact Us</a></li>
+              </ul>
+            </div>
+            
+            <!-- Legal Column -->
+            <div class="">
+              <h3 class="text-lg font-semibold mb-4 ">LEGAL</h3>
+              <ul>
+                <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+                <li><a href="#" class="hover:underline">Terms & Condition</a></li>
+                <li><a href="#" class="hover:underline">Blog</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Separator -->
+        <div class="border-t border-gray-300 my-8"></div>
+      
+        <!-- Bottom section with company details and map -->
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-white py-4 pb-10">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Company Information -->
+            <div class="space-y-2">
+              <h3 class="font-bold text-lg">LAW DECISION</h3>
+              <p>ADDRESS</p>
+              <p>San Francisco, CA</p>
+              <p>560 Bush St & 20th Ave, Apt</p>
+              <p>+38 044 222 74 80</p>
+            </div>
+      
+            <!-- Help Section -->
+            <div class="space-y-2">
+              <h3 class="font-bold text-lg">HELP</h3>
+              <p>Looking cautiously round, to ascertain that they were not overhead, the two hags cowered neared to the fire, and chuckled heartily.</p>
+              <button class="bg-transparent border border-green-500 text-green-500 hover:bg-green-500 hover:text-white py-2 px-6 rounded-full transition duration-200">CONTACT US</button>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Map section (Fullscreen Background) -->
+        <div class="absolute inset-x-0 py- h-[300px]">
+          <iframe
+            class="w-full "
+            frameborder="0" 
+            style="border:0;" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.882412504887!2d105.80486611545318!3d21.003495694014265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab7303d598e1%3A0x621f79cbbf3dc9d1!2zMTQgTmfDtSA0OTcgTmfhu41jIFRy4bqjLCBUaGFuaCBYdcOibiwgSGFub2kgVmlldG5hbQ!5e0!3m2!1svi!2s!4v1694517762013!5m2!1svi!2s"
+             height="300px">
+          </iframe>
+        </div>
+    </footer>   
+    
+</body>
+</html>

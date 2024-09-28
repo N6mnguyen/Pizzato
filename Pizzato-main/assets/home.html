@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My PHP Project with Tailwind</title>
+    <!-- Import Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+    .mySlides { display: none; }
+</style>
+<body class="bg-gray-100">
+    <!-- header -->
+    <div class="bg-[#004666]">
+        <div class=" flex items-center justify-between mx-20">
+            <div>
+                <img src="./assets/logo.png" alt="" width="120px" height="100px">
+            </div>
+            <div class="flex gap-10 font-medium font-sans text-white text-[14px]">
+                <p><a href="">Mã E-voucher</a></p>
+                <p><a href="">Khuyến Mãi</a></p>
+                <p><a href="products.htm">Thực Đơn</a></p>
+                <p><a href="">Theo Dõi Đơn Hàng</a></p>
+                <p><a href="">Danh Sách Cửa Hàng</a></p>
+                <p><a href="">Blog</a></p>
+            </div>
+            <div class="flex gap-4 text-white">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                    </svg>              
+                </div>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                        <path fill-rule="evenodd" d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 0 0 4.25 22.5h15.5a1.875 1.875 0 0 0 1.865-2.071l-1.263-12a1.875 1.875 0 0 0-1.865-1.679H16.5V6a4.5 4.5 0 1 0-9 0ZM12 3a3 3 0 0 0-3 3v.75h6V6a3 3 0 0 0-3-3Zm-3 8.25a3 3 0 1 0 6 0v-.75a.75.75 0 0 1 1.5 0v.75a4.5 4.5 0 1 1-9 0v-.75a.75.75 0 0 1 1.5 0v.75Z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                        <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd" />
+                     </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header -->
+
+    <!-- banner -->
+     <div class="mx-auto w-full">
+        <div class="relative ">
+
+            <!-- Slides -->
+            <div class="mySlides">
+                <img src="./assets/banner1.png" class="w-full h-[500px]" alt="Image 1">
+            </div>
+    
+            <div class="mySlides">
+                <img src="./assets/banner2.png" class="w-full h-[500px]" alt="Image 2">
+            </div>
+    
+            <div class="mySlides">
+                <img src="./assets/banner3.png" class="w-full h-[500px]" alt="Image 3">
+            </div>
+            <div class="mySlides">
+                <img src="./assets/banner4.png" class="w-full h-[500px]" alt="Image 4">
+            </div>
+            <div class="mySlides">
+                <img src="./assets/banner5.png" class="w-full h-[500px]" alt="Image 5">
+            </div>
+            <div class="mySlides">
+                <img src="./assets/banner6.png" class="w-full h-[500px]" alt="Image 6">
+            </div>
+            <a class="mx-4 absolute top-1/2 left-0 transform -translate-y-1/2 text-white bg-gray-300 p-4 rounded-r rounded-full hover:bg-gray-700" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="mx-4 absolute top-1/2 right-0 transform -translate-y-1/2 text-white bg-gray-300 p-4 rounded-l rounded-full hover:bg-gray-700" onclick="plusSlides(1)">&#10095;</a>
+            
+        </div>
+        <!-- Dots -->
+        <div class="flex justify-center mt-4">
+            <span class="dot w-2 h-2 bg-gray-300 rounded-full mx-1 cursor-pointer" onclick="currentSlide(1)"></span>
+            <span class="dot w-2 h-2 bg-gray-300 rounded-full mx-1 cursor-pointer" onclick="currentSlide(2)"></span>
+            <span class="dot w-2 h-2 bg-gray-300 rounded-full mx-1 cursor-pointer" onclick="currentSlide(3)"></span>
+            <span class="dot w-2 h-2 bg-gray-300 rounded-full mx-1 cursor-pointer" onclick="currentSlide(4)"></span>
+            <span class="dot w-2 h-2 bg-gray-300 rounded-full mx-1 cursor-pointer" onclick="currentSlide(5)"></span>
+            <span class="dot w-2 h-2 bg-gray-300 rounded-full mx-1 cursor-pointer" onclick="currentSlide(6)"></span>
+        </div>
+        </div>
+    </div>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" bg-gray-600", " bg-gray-400");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " bg-gray-600";
+        }
+        setInterval(() => {
+            plusSlides(1);
+        }, 4000); 
+    </script>
+    <!-- đồ ăn bán chạy nhất -->
+    <div class="py-10 mx-[100px]">
+        <div>
+            <h3 class="text-[22px] font-sans font-medium"> Đồ Ăn Bán Chạy</h3>
+        </div>
+        <hr class=" border-[#bcc1cb] my-4">
+        <div class="max-w-7xl mx-auto py-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Pizza Card -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img class="w-full h-48 object-cover transform transition-transform duration-300 hover:scale-105 hover:brightness-110" 
+                         src="./assets/bestseller.png" 
+                         alt="Pizza Bò Gơ Bò Mỹ Xốt Phô Mai Ngập Vị">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-center text-blue-800 uppercase">Pizza Bò Gơ Bò Mỹ Xốt Phô Mai Ngập Vị</h3>
+                        <div class="flex text-center justify-center mt-3">
+                            <p class="text-center text-gray-700 px-2 font-medium">Medium</p>
+                            <span class="font-medium">- 205,000₫</span>
+                        </div>
+                        <span class="inline-block bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full mt-2">NEW</span>
+                    </div>
+                </div>
+    
+                <!-- Pizza Card -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img class="w-full h-48 object-cover transform transition-transform duration-300 hover:scale-105 hover:brightness-110" 
+                         src="./assets/bestseller1.png" 
+                         alt="Pizza Hải Sản Xốt Pesto Chanh Sả">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-center text-blue-800 uppercase">Pizza Hải Sản Xốt Pesto Chanh Sả</h3>
+                        <div class="flex text-center justify-center mt-3">
+                            <p class="text-center text-gray-700 px-2 font-medium">Medium</p>
+                            <span class="font-medium">- 205,000₫</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Pizza Card -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img class="w-full h-48 object-cover transform transition-transform duration-300 hover:scale-105 hover:brightness-110" 
+                         src="./assets/bestseller2.png" 
+                         alt="Pizza Ngập Vị Phô Mai Hảo Hạng">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-center text-blue-800 uppercase">Pizza Ngập Vị Phô Mai Hảo Hạng</h3>
+                        <div class="flex text-center justify-center mt-3">
+                            <p class="text-center text-gray-700 px-2 font-medium">Medium</p>
+                            <span class="font-medium">- 205,000₫</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Pizza Card -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img class="w-full h-48 object-cover transform transition-transform duration-300 hover:scale-105 hover:brightness-110" 
+                         src="./assets/bestseller3.png" 
+                         alt="Pizza Siêu Topping Bò Và Tôm Nướng Kiểu Mỹ">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-center text-blue-800 uppercase">Pizza Siêu Topping Bò Và Tôm Nướng Kiểu Mỹ</h3>
+                        <div class="flex text-center justify-center mt-3">
+                            <p class="text-center text-gray-700 px-2 font-medium">Medium</p>
+                            <span class="font-medium">- 205,000₫</span>
+                        </div>
+                        <span class="inline-block bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full mt-2">Extra 50% Topping</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Món Ăn Mới -->
+    <div class=" mx-[100px]">
+        <div>
+            <h3 class="font-medium text-[22px] font-sans">Món Ăn Mới Nhất</h3>
+        </div>
+        <div class="max-w-7xl mx-auto py-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img class="w-full h-48 object-cover transform transition-transform duration-300 hover:scale-105 hover:brightness-110" 
+                         src="./assets/new.png" 
+                         alt="">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-center text-blue-800 uppercase">Gà Viên Phô Mai Đút Lò</h3>
+                        <div class="flex text-center justify-center mt-3">
+                            <p class="text-center text-gray-700 px-2 font-medium"><span>205,000₫</span></p>
+                        </div>
+                        <span class="inline-block bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full mt-2">NEW</span>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img class="w-full h-48 object-cover transform transition-transform duration-300 hover:scale-105 hover:brightness-110" 
+                         src="./assets/new1.png" 
+                         alt="">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-center text-blue-800 uppercase">Gà Viên Xốt Chua Ngọt Đút Lò</h3>
+                        <div class="flex text-center justify-center mt-3">
+                            <p class="text-center text-gray-700 px-2 font-medium"><span>205,000₫</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img class="w-full h-48 object-cover transform transition-transform duration-300 hover:scale-105 hover:brightness-110" 
+                         src="./assets/new2.png" 
+                         alt="">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-center text-blue-800 uppercase">Gà Viên Xốt BBQ Mayo Đút Lò</h3>
+                        <div class="flex text-center justify-center mt-3">
+                            <p class="text-center text-gray-700 px-2 font-medium"><span>205,000₫</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img class="w-full h-48 object-cover transform transition-transform duration-300 hover:scale-105 hover:brightness-110" 
+                         src="./assets/new3.png" 
+                         alt="">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-center text-blue-800 uppercase">Cánh Gà Nướng BBQ (4 miếng)</h3>
+                        <div class="flex text-center justify-center mt-3">
+                            <p class="text-center text-gray-700 px-2 font-medium"><span>205,000₫</span></p>
+                        </div>
+                        <span class="inline-block bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full mt-2">Extra 50% Topping</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Danh Mục Phổ Biến  -->
+    <div class="max-w-6xl mx-auto py-4"></div>
+        <!-- Title -->
+        <h2 class="font-medium text-[22px] font-sans text-center pb-6">Danh Mục Phổ Biến</h2>
+        <!-- Category Grid -->
+        <div class="grid grid-cols-3 sm:grid-cols-5 px-20">
+            <!-- Category Item -->
+            <div class="flex flex-col items-center">
+                <div class="w-40 h-40 bg-cover bg-center rounded-full overflow-hidden transform transition-transform duration-300 hover:scale-105 border-4 border-orange-400">
+                    <img src="./assets/category.png" alt="Pasta" class="w-full h-full object-cover">
+                </div>
+                <span class="mt-3 text-[16px] font-semibold">Pizza</span>
+            </div>
+        
+            <!-- Category Item -->
+            <div class="flex flex-col items-center">
+                <div class="w-40 h-40 bg-cover bg-center rounded-full overflow-hidden transform transition-transform duration-300 hover:scale-105 border-4 border-orange-400">
+                    <img src="./assets/category1.png" alt="Pizza" class="w-full h-full object-cover">
+                </div>
+                <span class="mt-3 text-[16px] font-semibold">Gà</span>
+            </div>
+        
+            <!-- Category Item -->
+            <div class="flex flex-col items-center">
+                <div class="w-40 h-40 bg-cover bg-center rounded-full overflow-hidden transform transition-transform duration-300 hover:scale-105 border-4 border-orange-400">
+                    <img src="./assets/category2.png" alt="Vegan" class="w-full h-full object-cover">
+                </div>
+                <span class="mt-3 text-[16px] font-semibold">Mỳ Ý</span>
+            </div>
+        
+            <!-- Category Item -->
+            <div class="flex flex-col items-center">
+                <div class="w-40 h-40 bg-cover bg-center rounded-full overflow-hidden transform transition-transform duration-300 hover:scale-105 border-4 border-orange-400">
+                    <img src="./assets/category3.png" alt="Desserts" class="w-full h-full object-cover">
+                </div>
+                <span class="mt-3 text-[16px] font-semibold">Khai Vị</span>
+            </div>
+        
+            <!-- Category Item -->
+            <div class="flex flex-col items-center">
+                <div class="w-40 h-40 bg-cover bg-center rounded-full overflow-hidden transform transition-transform duration-300 hover:scale-105 border-4 border-orange-400">
+                    <img src="./assets/category4.png" alt="Breakfast" class="w-full h-full object-cover">
+                </div>
+                <span class="mt-3 text-[16px] font-semibold">Thức Uống</span>
+            </div>
+        </div>    
+    </div>
+    <!-- Bình Luận? -->
+    <div class="py-20 h-[600px]">
+        <div class=" bg-[#dcfce7] bg-center h-[600px]">
+            <div class="">
+                <h2 class="text-center text-black text-xl font-bold mb-6 py-5">PHẢN HỒI CỦA KHÁCH HÀNG</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 px-20 ">
+                    <!-- Feedback 1 -->
+                    <div class="bg-white shadow-lg rounded-lg p-6">
+                        <div class="flex items-center">
+                            <img src="./assets/client.png" alt="Phượng Nguyễn" class="w-12 h-12 rounded-full object-cover mr-4">
+                            <span class="font-semibold">Phượng Nguyễn</span>
+                        </div>
+                        <p class="mt-4 text-gray-700">
+                            "Thấy mọi người review khá tốt nên mình gọi thử. Đầu tiên là vô cùng hài lòng với khoản Ship. Mình gọi giờ cao điểm, hẹn 1 tiếng lấy mà mới 30ph đã có nv gọi lấy bánh. Bánh đến vẫn nóng hổi, ăn khá vừa miệng, chắc sẽ gọi ship dài dài"
+                        </p>
+                    </div>
+        
+                    <!-- Feedback 2 -->
+                    <div class="bg-white shadow-lg rounded-lg p-6">
+                        <div class="flex items-center">
+                            <img src="./assets/client1.png" alt="Nhật Nam" class="w-12 h-12 rounded-full object-cover mr-4">
+                            <span class="font-semibold">Nhật Nam</span>
+                        </div>
+                        <p class="mt-4 text-gray-700">
+                            "Nhà mình ngay Giảng Võ nên cũng rất ưa đặt pizza ở Pizza Express Ngọc Khánh gần nhà. Và quan trọng là chất lượng pizza ở đây mình thấy ngon lắm nhé. Giá tính ra cũng rẻ. Mình hay gọi size 24cm tính tiền cho dễ. 1 cái size 24 là 100k. 30cm là 140k"
+                        </p>
+                    </div>
+        
+                    <!-- Feedback 3 -->
+                    <div class="bg-white shadow-lg rounded-lg p-6">
+                        <div class="flex items-center">
+                            <img src="./assets/client2.png" alt="Hoàng Chiến" class="w-12 h-12 rounded-full object-cover mr-4">
+                            <span class="font-semibold">Hoàng Chiến</span>
+                        </div>
+                        <p class="mt-4 text-gray-700">
+                            "Đã nghe nói đến nhiều nhưng đến hôm nay mình mới được ăn ^^ Quán có 4 cơ sở nên rất thuận tiện để đặt giao hàng. Mình đặt ở Ngọc Khánh ngay gần nhà 1 pizza meat lovers và 1 pizza hải sản, rất nhanh bánh đã được mang đến và vẫn còn nóng"
+                        </p>
+                    </div>
+        
+                    <!-- Feedback 4 -->
+                    <div class="bg-white shadow-lg rounded-lg p-6">
+                        <div class="flex items-center">
+                            <img src="./assets/client3.png" alt="Phuongmac17" class="w-12 h-12 rounded-full object-cover mr-4">
+                            <span class="font-semibold">Phuongmac17</span>
+                        </div>
+                        <p class="mt-4 text-gray-700">
+                            "Có mặt sau 40p, nóng hổi. Pizza khá giống pepperonis nhưng pepp mà để mua 1 tặng 1 thì nhân chán lắm, lèo tèo. Chẳng bù cho bạn này nhân vẫn đầy đặn, phô mai vừa vặn thơm ngon. Rất là ok! 3 đứa ăn 2 cái M mà lặc lè. Sẽ còn order dài <3"
+                        </p>
+                    </div>
+                </div>
+        
+                <!-- Pagination Dots -->
+                <div class="flex justify-center mt-6 space-x-2">
+                    <span class="w-2.5 h-2.5 bg-red-500 rounded-full"></span>
+                    <span class="w-2.5 h-2.5 bg-gray-300 rounded-full"></span>
+                    <span class="w-2.5 h-2.5 bg-gray-300 rounded-full"></span>
+                </div>
+            </div>
+        </div>   `
+    </div>
+    <!-- chi tiết -->
+    <div class="py-10">
+        <div class="relative bg-cover bg-center" style="background-image: url('./assets/bannerchitiet.png')">
+            <div class="">
+                <div class="container mx-auto py-12 px-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                      <!-- Quality Section -->
+                      <div class="bg-white shadow-md rounded-lg p-6 text-center">
+                        <div class="mb-4">
+                            <img src="./assets/homechitiet.png" alt="" class="h-[64px] w-[70px] mx-auto">
+                        </div>
+                        <h2 class="text-red-600 text-xl font-semibold mb-2">CHẤT LƯỢNG DẪN ĐẦU</h2>
+                        <p class="text-gray-700">Chú trọng khâu tuyển chọn đội ngũ đầu bếp chuyên nghiệp, thực đơn của Pizza Express luôn được đổi mới, đa dạng với pizza nhiều hương vị, sandwich, mì Ý và các món ăn nhanh khác.</p>
+                      </div>
+                      
+                      <!-- On-Time Delivery Section -->
+                      <div class="bg-white shadow-md rounded-lg p-6 text-center">
+                        <div class="mb-4">
+                            <img src="./assets/homechitiet1.png" alt="" class="h-[64px] w-[70px] mx-auto">
+                        </div>
+                        <h2 class="text-red-600 text-xl font-semibold mb-2">GIAO HÀNG ĐÚNG GIỜ</h2>
+                        <p class="text-gray-700">Để tăng cường sự tin tưởng và yên tâm với khách hàng, Pizza Express cam kết luôn giao hàng đúng giờ và chi phí giao hàng rẻ nhất để đảm bảo khách hàng có thể nhận bánh trong thời gian nhanh nhất.</p>
+                      </div>
+                
+                      <!-- Pizza Take Away Section -->
+                      <div class="bg-white shadow-md rounded-lg p-6 text-center">
+                        <div class="mb-4">
+                            <img src="./assets/homechitiet2.png" alt="" class="h-[64px] w-[70px] mx-auto">
+                        </div>
+                        <h2 class="text-red-600 text-xl font-semibold mb-2">PIZZA TAKE AWAY</h2>
+                        <p class="text-gray-700">Lựa chọn cho mình một hướng đi mới để tạo nên sự khác biệt, mô hình Pizza take away - pizza mang đi giúp khách hàng tiết kiệm thời gian, đem đến sự tiện lợi tối ưu trong việc lựa chọn, thanh toán, đóng gói và nhận hàng.</p>
+                      </div>
+                
+                      <!-- Professional Service Section -->
+                      <div class="bg-white shadow-md rounded-lg p-6 text-center">
+                        <div class="mb-4">
+                            <img src="./assets/homechitiet3.png" alt="" class="h-[64px] w-[70px] mx-auto">
+                        </div>
+                        <h2 class="text-red-600 text-xl font-semibold mb-2">PHỤC VỤ CHUYÊN NGHIỆP</h2>
+                        <p class="text-gray-700">Pizza Express cùng với đội ngũ nhân viên mang đầy sức trẻ và nhiệt huyết, chúng tôi luôn mong muốn đem lại cho khách hàng của mình chất lượng dịch vụ tốt nhất, luôn lắng nghe và chăm sóc những nhu cầu dù là nhỏ nhất của Quý khách.</p>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </div>
+    <!-- footer -->
+    <footer class="bg-[#004666] pt-10">
+        <!-- Top section with links and information -->
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-white">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <!-- Learn More Column -->
+            <div>
+              <h3 class="text-lg font-semibold mb-4">LEARN MORE</h3>
+              <ul>
+                <li><a href="#" class="hover:underline">Pricing</a></li>
+                <li><a href="#" class="hover:underline">Free Stuff</a></li>
+                <li><a href="#" class="hover:underline">Help Center</a></li>
+              </ul>
+            </div>
+            
+            <!-- About Column -->
+            <div>
+              <h3 class="text-lg font-semibold mb-4">ABOUT</h3>
+              <ul>
+                <li><a href="#" class="hover:underline">About Singleton</a></li>
+                <li><a href="#" class="hover:underline">Jobs</a></li>
+                <li><a href="#" class="hover:underline">Team</a></li>
+              </ul>
+            </div>
+            
+            <!-- Get In Touch Column -->
+            <div>
+              <h3 class="text-lg font-semibold mb-4">GET IN TOUCH</h3>
+              <ul>
+                <li><a href="#" class="hover:underline">Get Support</a></li>
+                <li><a href="#" class="hover:underline">Contact Us</a></li>
+              </ul>
+            </div>
+            
+            <!-- Legal Column -->
+            <div class="">
+              <h3 class="text-lg font-semibold mb-4 ">LEGAL</h3>
+              <ul>
+                <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+                <li><a href="#" class="hover:underline">Terms & Condition</a></li>
+                <li><a href="#" class="hover:underline">Blog</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Separator -->
+        <div class="border-t border-gray-300 my-8"></div>
+      
+        <!-- Bottom section with company details and map -->
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-white py-4 pb-10">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Company Information -->
+            <div class="space-y-2">
+              <h3 class="font-bold text-lg">LAW DECISION</h3>
+              <p>ADDRESS</p>
+              <p>San Francisco, CA</p>
+              <p>560 Bush St & 20th Ave, Apt</p>
+              <p>+38 044 222 74 80</p>
+            </div>
+      
+            <!-- Help Section -->
+            <div class="space-y-2">
+              <h3 class="font-bold text-lg">HELP</h3>
+              <p>Looking cautiously round, to ascertain that they were not overhead, the two hags cowered neared to the fire, and chuckled heartily.</p>
+              <button class="bg-transparent border border-green-500 text-green-500 hover:bg-green-500 hover:text-white py-2 px-6 rounded-full transition duration-200">CONTACT US</button>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Map section (Fullscreen Background) -->
+        <div class="absolute inset-x-0 py- h-[300px]">
+          <iframe
+            class="w-full "
+            frameborder="0" 
+            style="border:0;" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.882412504887!2d105.80486611545318!3d21.003495694014265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab7303d598e1%3A0x621f79cbbf3dc9d1!2zMTQgTmfDtSA0OTcgTmfhu41jIFRy4bqjLCBUaGFuaCBYdcOibiwgSGFub2kgVmlldG5hbQ!5e0!3m2!1svi!2s!4v1694517762013!5m2!1svi!2s"
+             height="300px">
+          </iframe>
+        </div>
+    </footer>      
+</body>
+</html>
