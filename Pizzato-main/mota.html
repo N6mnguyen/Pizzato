@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Đơn Hàng Pizza</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Ẩn modal mặc định */
+        #orderModal {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Header -->
+    <header class="bg-blue-800 p-4 text-white">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Domino's Pizza</h1>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <div class="container mx-auto py-8">
+        <div class="grid grid-cols-12 gap-4">
+            <!-- Pizza Selection -->
+            <div class="col-span-8">
+                <div class="bg-white p-6 rounded shadow">
+                    <h2 class="text-2xl font-bold mb-4">Chọn Pizza Của Bạn</h2>
+
+                    <!-- Chọn Đế Bánh -->
+                    <div class="mb-6">
+                        <h3 class="font-semibold mb-2">Chọn Đế Bánh:</h3>
+                        <div class="flex space-x-4">
+                            <label class="flex items-center">
+                                <input type="radio" name="crust" class="mr-2" checked>
+                                <span>Đế Dày Bột Tươi</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="radio" name="crust" class="mr-2">
+                                <span>Đế Vừa Bột Tươi</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="radio" name="crust" class="mr-2">
+                                <span>Đế Mỏng Giòn</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Chọn Cỡ Bánh -->
+                    <div class="mb-6">
+                        <h3 class="font-semibold mb-2">Chọn Cỡ Bánh:</h3>
+                        <div class="flex space-x-4">
+                            <label class="flex items-center">
+                                <input type="radio" name="size" class="mr-2" checked>
+                                <span>Cỡ 9 inch - 235,000₫</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="radio" name="size" class="mr-2">
+                                <span>Cỡ 12 inch - 345,000₫</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Nút thêm vào giỏ hàng -->
+                    <div class="flex items-center justify-between">
+                        <button id="addToCartBtn" class="bg-red-600 text-white px-6 py-3 rounded-lg">
+                            Thêm Vào Giỏ Hàng 235,000₫
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Chi Tiết Đơn Hàng -->
+    <div id="orderModal" class="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center">
+        <div class="bg-white p-6 rounded shadow-lg max-w-lg w-full">
+            <h2 class="text-2xl font-bold mb-4">Chi Tiết Đơn Hàng</h2>
+            <p>Bạn đã thêm 1 Pizza Siêu Topping Hải Sản vào giỏ hàng.</p>
+            <ul class="list-disc list-inside">
+                <li>Loại đế: Đế Dày Bột Tươi</li>
+                <li>Kích cỡ: 9 inch</li>
+                <li>Giá: 235,000₫</li>
+            </ul>
+
+            <!-- Nút đóng modal -->
+            <div class="mt-6 text-right">
+                <button id="closeModalBtn" class="bg-blue-600 text-white px-4 py-2 rounded">
+                    Đóng
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-blue-800 p-4 text-white text-center">
+        © 2024 Domino's Pizza
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Lấy phần tử modal và nút thêm vào giỏ hàng
+        const orderModal = document.getElementById('orderModal');
+        const addToCartBtn = document.getElementById('addToCartBtn');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+
+        // Hiển thị modal khi nhấn "Thêm Vào Giỏ Hàng"
+        addToCartBtn.addEventListener('click', function() {
+            orderModal.style.display = 'flex';
+        });
+
+        // Đóng modal khi nhấn "Đóng"
+        closeModalBtn.addEventListener('click', function() {
+            orderModal.style.display = 'none';
+        });
+
+        // Đóng modal khi nhấn ra ngoài modal
+        window.addEventListener('click', function(event) {
+            if (event.target == orderModal) {
+                orderModal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
